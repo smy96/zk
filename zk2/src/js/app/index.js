@@ -4,7 +4,7 @@ define(["jquery", "render"], function($, render) {
         dataType: "json",
         success: function(res) {
             console.log(res);
-            render(res, "#list-tpl", ".li-list");
+            render(res, "#list-tpl", ".ul-list");
         }
     })
 

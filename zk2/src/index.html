@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="./js/libs/flexible.js"></script>
+    <script>
+        document.documentElement.style.fontSize = window.innerWidth / 750 * 100 + 'px'
+    </script>
+    <!-- <script src="./js/libs/flexible.js"></script> -->
     <link rel="stylesheet" href="./scss/style.css">
     <title>Document</title>
 </head>
@@ -22,17 +25,23 @@
                         <dt><img src="./img/2.JPG" alt=""></dt>
                         <dd>满300减70</dd>
                     </dl>
+                    <dl>
+                        <dt><img src="./img/2.JPG" alt=""></dt>
+                        <dd>满300减70</dd>
+                    </dl>
                 </li> -->
             </ul>
             <script type="text/x-handerbars-template" id="list-tpl">
-                {{#each this}}
+
                 <li class="li-list">
+                    {{#each this}}
                     <dl>
                         <dt><img src="{{img}}" alt=""></dt>
                         <dd>{{title}}</dd>
                     </dl>
+                    {{/each}}
                 </li>
-                {{/each}}
+
             </script>
         </main>
         <footer>

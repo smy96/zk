@@ -4,8 +4,8 @@ var server = require("gulp-webserver");
 var url = require("url");
 var path = require("path");
 var fs = require("fs");
-
-var listData = require("./mock/data/data.json");
+var mock = require("./mock");
+// var listData = require("./mock/data/data.json");
 gulp.task("server", function() {
     gulp.src("src")
         .pipe(server({
@@ -19,7 +19,7 @@ gulp.task("server", function() {
                 pathname = pathname === "/" ? "/index.html" : pathname;
                 if (/\/api\//.test(req.url)) {
                     if (pathname === "/api/list") {
-                        res.end(JSON.stringify(listData));
+                        res.end(JSON.stringify(mock("/api/list")));
                     }
 
                 } else {

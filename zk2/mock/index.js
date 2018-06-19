@@ -3,5 +3,5 @@ var jsonobj = {
     "/api/list": listData
 };
 module.exports = function(url) {
-    listData(url)
+    return jsonobj[url]
 }
