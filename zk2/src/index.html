@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./js/libs/flexible.js"></script>
+    <link rel="stylesheet" href="./scss/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <h3>必买大牌</h3>
+        </header>
+        <main>
+            <ul class="ul-list">
+                <!-- <li class="li-list">
+                    <dl>
+                        <dt><img src="./img/2.JPG" alt=""></dt>
+                        <dd>满300减70</dd>
+                    </dl>
+                </li> -->
+            </ul>
+            <script type="text/x-handerbars-template" id="list-tpl">
+                {{#each this}}
+                <li class="li-list">
+                    <dl>
+                        <dt><img src="{{img}}" alt=""></dt>
+                        <dd>{{title}}</dd>
+                    </dl>
+                </li>
+                {{/each}}
+            </script>
+        </main>
+        <footer>
+            <dl>
+                <dt><img src="./img/1.JPG" alt=""></dt>
+                <dd>主会场</dd>
+            </dl>
+            <dl>
+                <dt><img src="./img/1.JPG" alt=""></dt>
+                <dd>主会场</dd>
+            </dl>
+            <dl>
+                <dt><img src="./img/1.JPG" alt=""></dt>
+                <dd>主会场</dd>
+            </dl>
+            <dl>
+                <dt><img src="./img/1.JPG" alt=""></dt>
+                <dd>主会场</dd>
+            </dl>
+            <dl>
+                <dt><img src="./img/1.JPG" alt=""></dt>
+                <dd>主会场</dd>
+            </dl>
+        </footer>
+    </div>
+    <script src="./js/libs/require.js"></script>
+    <script>
+        require(["./js/main"], function() {
+            require(["index"])
+        })
+    </script>
+</body>
+
+</html>
